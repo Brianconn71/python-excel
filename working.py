@@ -2,6 +2,7 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font
 
+<<<<<<< HEAD
 data = {
 	"Joe": {
 		"math": 65,
@@ -54,3 +55,12 @@ for col in range(1,6):
     ws[get_column_letter(col) + '1'].font = Font(bold=True, color="00ff0000")
 
 wb.save("Grades.xlsx")
+=======
+wb = load_workbook('GTN.xlsx')
+ws = wb.active
+print(ws['A2'].value)
+ws['A2'].value = "Test"
+print(ws['A2'].value)
+
+wb.save('GTN.xlsx')
+>>>>>>> 3d4ae598f8517ab8a93af3b7c1e9a918e23cf3ab
